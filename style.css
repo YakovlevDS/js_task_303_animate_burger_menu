@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    height: 100%;
+    background-color: #eeeeee;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-trasform: translate3d(0, 0, 0);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: #8bc4ea;
+}
+
+.container .inner {
+    width: 100%;
+    height: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.container .inner figure {
+    align-self: center;
+    max-height: 80px;
+    cursor: pointer;
+}
+
+.container .inner figure .inner {
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.container .inner figure .inner span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background-color: #ffffff;
+    transition: top 0.2s ease-in-out 0.4s, transform 0.4s ease-in-out, opacity 0.2s ease-in-out 0.2s, left 0.2s ease-in-out;
+    -webkit-transition: top 0.2s ease-in-out 0.4s, transform 0.4s ease-in-out, opacity 0.2s ease-in-out 0.2s, left 0.2s ease-in-out;
+    -moz-transition: top 0.2s ease-in-out 0.4s, transform 0.4s ease-in-out, opacity 0.2s ease-in-out 0.2s, left 0.2s ease-in-out;
+    -ms-transition: top 0.2s ease-in-out 0.4s, transform 0.4s ease-in-out, opacity 0.2s ease-in-out 0.2s, left 0.2s ease-in-out;
+}
+
+.container .inner figure .inner span:nth-child(1) {
+    top: 0;
+}
+
+.container .inner figure .inner span:nth-child(2),
+.container .inner figure .inner span:nth-child(4) {
+    top: 18px;
+}
+
+.container .inner figure .inner span:nth-child(3) {
+    top: 36px;
+}
+
+.container .inner figure.colapse-spin .inner span {
+    transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s;
+    -webkit-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s;
+    -moz-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s;
+    -ms-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s;
+}
+
+.container .inner figure.colapse-spin .inner span:nth-child(1) {
+    top: 18px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-trasform: rotate(45deg);
+}
+
+.container .inner figure.colapse-spin .inner span:nth-child(2) {
+    top: 18px;
+    opacity: 0;
+}
+
+.container .inner figure.colapse-spin .inner span:nth-child(3) {
+    top: 18px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-trasform: rotate(-45deg);
+}
+
+.container .inner figure.colapse-down-spin .inner span {
+    transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s;
+    -webkit-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s;
+    -moz-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s;
+    -ms-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s;
+}
+
+.container .inner figure.colapse-down-spin .inner span:nth-child(1) {
+    top: 36px;
+    transform-origin: left center;
+    transform: rotate(-45deg) translateX(7px);
+    -webkit-transform: rotate(-45deg) translateX(7px);
+    -moz-transform: rotate(-45deg) translateX(7px);
+    -ms-trasform: rotate(-45deg) translateX(7px);
+}
+
+.container .inner figure.colapse-down-spin .inner span:nth-child(2) {
+    top: 36px;
+    opacity: 0;
+}
+
+.container .inner figure.colapse-down-spin .inner span:nth-child(3) {
+    top: 36px;
+    transform-origin: right center;
+    transform: rotate(45deg) translateX(-7px);
+    -webkit-transform: rotate(45deg) translateX(-7px);
+    -moz-transform: rotate(45deg) translateX(-7px);
+    -ms-trasform: rotate(45deg) translateX(-7px);
+}
+
+.container .inner figure.foldin .inner span {
+    transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, 0.2s ease-in-out 0.2s;
+    -webkit-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, 0.2s ease-in-out 0.2s;
+    -moz-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, 0.2s ease-in-out 0.2s;
+    -ms-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, 0.2s ease-in-out 0.2s;
+}
+
+.container .inner figure.foldin .inner span:nth-child(1) {
+    transform-origin: right center;
+    transform: rotate(-45deg) translateY(5px);
+    -webkit-transform: rotate(-45deg) translateY(5px);
+    -moz-transform: rotate(-45deg) translateY(5px);
+    -ms-trasform: rotate(-45deg) translateY(5px);
+}
+
+.container .inner figure.foldin .inner span:nth-child(2) {
+    opacity: 0;
+}
+
+.container .inner figure.foldin .inner span:nth-child(3) {
+    transform-origin: right center;
+    transform: rotate(45deg) translateY(-5px);
+    -webkit-transform: rotate(45deg) translateY(-5px);
+    -moz-transform: rotate(45deg) translateY(-5px);
+    -ms-trasform: rotate(45deg) translateY(-5px);
+}
+
+.container .inner figure.vortex .inner span {
+    transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s;
+    -webkit-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s;
+    -moz-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s;
+    -ms-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s;
+}
+
+.container .inner figure.vortex .inner span:nth-child(1) {
+    top: 18px;
+    transform: rotate(405deg);
+    -webkit-transform: rotate(405deg);
+    -moz-transform: rotate(405deg);
+    -ms-trasform: rotate(405deg);
+}
+
+.container .inner figure.vortex .inner span:nth-child(2) {
+    opacity: 0;
+}
+
+.container .inner figure.vortex .inner span:nth-child(3) {
+    top: 18px;
+    transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-trasform: rotate(315deg);
+}
+
+.container .inner figure.foldin-out .inner span {
+    transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s, left 0.4s ease-in-out;
+    -webkit-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s, left 0.4s ease-in-out;
+    -moz-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s, left 0.4s ease-in-out;
+    -ms-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s, left 0.4s ease-in-out;
+}
+
+.container .inner figure.foldin-out .inner span:nth-child(1) {
+    transform-origin: right center;
+    transform: rotate(-45deg) translateY(5px);
+    -webkit-transform: rotate(-45deg) translateY(5px);
+    -moz-transform: rotate(-45deg) translateY(5px);
+    -ms-trasform: rotate(-45deg) translateY(5px);
+}
+
+.container .inner figure.foldin-out .inner span:nth-child(2) {
+    opacity: 0;
+    left: -40px;
+}
+
+.container .inner figure.foldin-out .inner span:nth-child(3) {
+    transform-origin: right center;
+    transform: rotate(45deg) translateY(-5px);
+    -webkit-transform: rotate(45deg) translateY(-5px);
+    -moz-transform: rotate(45deg) translateY(-5px);
+    -ms-trasform: rotate(45deg) translateY(-5px);
+}
+
+.container .inner figure.revolve .inner span {
+    transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s, left 0.4s ease-in-out;
+    -webkit-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s, left 0.4s ease-in-out;
+    -moz-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s, left 0.4s ease-in-out;
+    -ms-transition: top 0.2s ease-in-out, transform 0.4s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s, left 0.4s ease-in-out;
+}
+
+.container .inner figure.revolve .inner span:nth-child(1) {
+    transform-origin: center;
+    transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-trasform: rotateY(90deg);
+}
+
+.container .inner figure.revolve .inner span:nth-child(2) {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-trasform: rotate(45deg);
+}
+
+.container .inner figure.revolve .inner span:nth-child(4) {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-trasform: rotate(-45deg);
+}
+
+.container .inner figure.revolve .inner span:nth-child(3) {
+    transform-origin: center;
+    transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-trasform: rotateY(90deg);
+}
